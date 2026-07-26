@@ -165,8 +165,8 @@ if args.exclude is None:
 if args.brute:
     best = ""
     best_compression = None
-    best_size = 999999999999999999 # костыль
-    speed = 9999 # костыль
+    best_size = float("inf")
+    speed = float("inf")
     for i in [i for i in ["bz2", "gzip", "zlib", "lzma"] if not i in args.exclude.split(",")]:
         if args.brute_extreme:
             if i == "zlib":
