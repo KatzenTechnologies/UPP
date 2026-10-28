@@ -241,7 +241,7 @@ print("Compressing code...")
 compressed = b""
 if lib == "zlib":
     compressed = globals()[lib].compress(code, level=compression)
-if lib == "gzip":
+elif lib == "gzip":
     compressed = globals()[lib].compress(code, compresslevel=compression)
 else:
     compressed = globals()[lib].compress(code)
